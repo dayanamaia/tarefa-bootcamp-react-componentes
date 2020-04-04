@@ -4,8 +4,10 @@ import { Form, Button } from 'semantic-react-ui'
 const ExampleComponent = (props) => {
 
     const [showForm, setShowForm] = useState(false);
-    const [email, setEmail] = useState('');
-    const [name, setName] = useState(props.name);
+    const [form, setForm] = useState({
+        email: '',
+        name: props.name
+    });
 
 
     useEffect(() => {
@@ -13,13 +15,13 @@ const ExampleComponent = (props) => {
         /* algum fetch de dado que a gente quer rodar somente uma vez
         ....................
         */
-       
+
     }, []);
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
+    const handleChange = (e) => {
+        const { name, value} = e.target;
+
+        setForm((state) => ( {...state, [name]: value } ));
     }
 
     handleSubmit = (e) => {
