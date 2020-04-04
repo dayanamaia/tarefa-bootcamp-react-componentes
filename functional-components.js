@@ -46,19 +46,16 @@ const ExampleComponent = (props) => {
     }
 
     // RENDER --------------------------------
-    render() {
-
-        return (
-            <div >
-                {this.state.showForm ? this.renderForm()
-                    : <Fragment>
-                        <h3>Hi, {this.state.name}</h3>
-                        <Button onClick={this.toggleShowForm} >Enter Email Address!</Button>
-                    </Fragment>
-                }
-            </div>
-        )
-    }
+    return (
+        <>
+            {showForm ? renderForm()
+                : <Fragment>
+                    <h3>Hi, {form.name}</h3>
+                    <Button onClick={toggleShowForm} >Enter Email Address!</Button>
+                </Fragment>
+            }
+        </>
+    )
 }
 
 export default ExampleComponent
