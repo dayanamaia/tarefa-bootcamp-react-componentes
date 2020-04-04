@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useState, setState } from 'react';
 import { Form, Button } from 'semantic-react-ui'
 
-const ExampleComponent = () => {
+const ExampleComponent = (props) => {
 
-    state = {
-        showForm: false,
-        email: "",
-        name: this.props.name
-    }
+    const [showForm, setShowForm] = useState(false);
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState(props.name);
+
 
     componentDidMount() {
 
