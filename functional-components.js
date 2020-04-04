@@ -33,10 +33,7 @@ const ExampleComponent = (props) => {
     }
 
 
-    const toggleShowForm = () => {
-
-        setShowForm(!showForm);
-    }
+    const toggleShowForm = () => setShowForm(!showForm);
 
     // RENDERS ------------------------------
 
