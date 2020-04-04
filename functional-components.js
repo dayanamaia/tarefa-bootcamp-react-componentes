@@ -24,7 +24,7 @@ const ExampleComponent = (props) => {
         setForm((state) => ( {...state, [name]: value } ));
     }
 
-    handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
 
         /* executa alguma request 
