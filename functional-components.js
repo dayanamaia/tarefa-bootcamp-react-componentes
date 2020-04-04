@@ -37,10 +37,10 @@ const ExampleComponent = (props) => {
 
     // RENDERS ------------------------------
 
-    renderForm() {
-        return <Form onSubmit={this.handleSubmit}>
-            <Form.Input name="name" value={this.state.name} onChange={this.handleFormChange} />
-            <Form.Input name="email" value={this.state.email} onChange={this.handleFormChange} />
+    const renderForm = ()=> {
+        return <Form onSubmit={handleSubmit}>
+            <Form.Input name="name" value={form.name} onChange={handleFormChange} />
+            <Form.Input name="email" value={form.email} onChange={handleFormChange} />
             <Form.Button type="submit">Submit!</Form.Button>
         </Form>
     }
