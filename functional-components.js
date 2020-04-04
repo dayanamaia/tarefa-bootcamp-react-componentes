@@ -1,4 +1,4 @@
-import React, { useState, setState } from 'react';
+import React, { useState, setState, useEffect } from 'react';
 import { Form, Button } from 'semantic-react-ui'
 
 const ExampleComponent = (props) => {
@@ -8,12 +8,13 @@ const ExampleComponent = (props) => {
     const [name, setName] = useState(props.name);
 
 
-    componentDidMount() {
+    useEffect(() => {
 
         /* algum fetch de dado que a gente quer rodar somente uma vez
         ....................
         */
-    }
+       
+    }, []);
 
     handleChange = (e) => {
         this.setState({
