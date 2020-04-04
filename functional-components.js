@@ -33,11 +33,9 @@ const ExampleComponent = (props) => {
     }
 
 
-    toggleShowForm = (e) => {
+    const toggleShowForm = () => {
 
-        this.setState({
-            showForm: !this.state.showForm,
-        })
+        setShowForm(!showForm);
     }
 
     // RENDERS ------------------------------
