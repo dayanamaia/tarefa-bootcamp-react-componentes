@@ -39,8 +39,8 @@ const ExampleComponent = (props) => {
 
     const renderForm = ()=> {
         return <Form onSubmit={handleSubmit}>
-            <Form.Input name="name" value={form.name} onChange={handleFormChange} />
-            <Form.Input name="email" value={form.email} onChange={handleFormChange} />
+            <Form.Input name="name" value={form.name} onChange={handleChange} />
+            <Form.Input name="email" value={form.email} onChange={handleChange} />
             <Form.Button type="submit">Submit!</Form.Button>
         </Form>
     }
